@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>My PostList</h1>
+    <hr>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <button class="btn btn-default navbar-btn" (click)="authenticationService.login()">Login with Google</button>
+    <div class="row" *ngFor="let post of posts">
+        <div class="card card-block">
+            <h4 class="card-title">{{ post.title }}</h4>
+            <p class="card-text">{{ post.body }}</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+</div>
